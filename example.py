@@ -10,13 +10,14 @@ def read_flag_from_file():
 
 def main():
     secret_number = 42  # The specific number that the user needs to enter
-    user_input = input("Enter a number: ")
+    print("Enter a number: ")
+    user_input = input()
 
     try:
         user_number = int(user_input)
         if user_number == secret_number:
             flag = read_flag_from_file()
-            print("Congratulations!\n" + flag)
+            print("Congratulations: " + flag)
         else:
             print("Wrong number. Try again.")
     except ValueError:
